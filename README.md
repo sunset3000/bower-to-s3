@@ -10,6 +10,17 @@ Bower package.
 # Install as a global executable
 $ npm install -g bower-to-s3
 $ bower-to-s3 -h # print help
+  Usage: bower-to-s3 [options] package bucket
+
+  Options:
+
+    -h, --help                   output usage information
+    -b, --base [directory]       The base directory within the Bower package to use. (Defaults to "./")
+    -s, --select [glob pattern]  The glob pattern to use in the base directory when selecting files to upload. (Defaults to "**/*")
+    -v, --version [number]       The package version to upload. If fuzzy the latest matching one is used. (Defaults to latest release)
+    -p, --prefix [prefix]        The prefix in the S3 bucket to upload to. (Defaults to root of the S3 bucket)
+    --keyId [key id]             The AWS Access Key Id to use when uploading files.
+    --accessKey [access key]     The AWS Access Key to use when uploading files.
 ```
 
 ## Usage via the API
