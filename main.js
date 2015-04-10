@@ -1,5 +1,5 @@
 var installBowerPackage = require('./lib/installBowerPackage');
-var s3Utils = require('./lib/s3Utils');
+var s3Util = require('s3-util');
 var path = require('path');
 var os = require('os');
 var its = require('its');
@@ -36,7 +36,7 @@ module.exports = function(config){
     select = config.select !== undefined ? config.select : '**/*',
     prefix = config.prefix !== undefined ? config.prefix : '';
 
-  var client = s3Utils(awsAccessKeyId, awsSecretAccessKey, bucket);
+  var client = s3Util(awsAccessKeyId, awsSecretAccessKey, bucket);
 
   var tmpDir = os.tmpdir();
 
@@ -48,7 +48,7 @@ module.exports = function(config){
       var resolvedBase = path.join(tmpDir, name, base);
       var searchGlob = path.join(resolvedBase, select);
       console.log('Uploading', name + '#' + info.pkgMeta.version, 'to', bucket + '/' + prefix);
-      return client.putGlob(searchGlob, prefix, {
+      return client.sync(searchGlob, prefix, {
         base: resolvedBase
       });
     });

@@ -1,6 +1,6 @@
 #bower-to-s3
 
-> Publish [bower](http://bower.io/) packages to [S3](http://aws.amazon.com/s3/)
+> Upload [bower](http://bower.io/) packages to [S3](http://aws.amazon.com/s3/)
 
 Bower to S3 synchronizes an S3 bucket + prefix with the contents of a given
 Bower package.
