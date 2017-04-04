@@ -1,6 +1,6 @@
 {
   "name": "bower-to-s3",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Upload bower packages to S3",
   "keywords": [
     "s3",
@@ -18,7 +18,7 @@
   "author": {
     "name": "Ozan Turgut",
     "email": "ozan@signalfx.com",
-    "url": "http://ozan.io"
+    "url": "http://unsetbit.com"
   },
   "licenses": [
     {
@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/signalfx/bower-to-s3",
   "dependencies": {
-    "bower": "^1.4.1",
+    "bower": "1.7.9",
     "commander": "^2.7.1",
     "its": "^1.0.2",
     "q": "^1.2.0",
